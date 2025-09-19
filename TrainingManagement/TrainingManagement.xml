@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrainingManagement</name>
+    </assembly>
+    <members>
+        <member name="M:TrainingManagement.Controllers.AttachmentController.Upload(TrainingManagement.Model.AttachmentUploadDto)">
+            <summary>
+            上传附件
+            </summary>
+            <param name="dto">附件上传信息</param>
+            <returns>上传结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.AttachmentController.Download(System.Int32)">
+            <summary>
+            下载附件
+            </summary>
+            <param name="id">附件ID</param>
+            <returns>文件流</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.AttachmentController.Delete(System.Int32)">
+            <summary>
+            删除附件
+            </summary>
+            <param name="id">附件ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.AttachmentController.GetList(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            获取附件列表
+            </summary>
+            <param name="trainingId">培训ID（可选）</param>
+            <param name="questionnaireId">问卷ID（可选）</param>
+            <returns>附件列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.AttachmentController.LinkAttachment(TrainingManagement.Model.AttachmentLinkDto)">
+            <summary>
+            关联附件到培训或问卷
+            </summary>
+            <param name="dto">附件关联信息</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:TrainingManagement.Controllers.DepartmentController">
+            <summary>
+            部门管理API控制器
+            </summary>
+        </member>
+        <member name="M:TrainingManagement.Controllers.DepartmentController.GetTree">
+            <summary>
+            获取部门树形结构
+            </summary>
+            <returns>部门树形结构</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.DepartmentController.Create(TrainingManagement.Model.Dtos.DepartmentCreateDto)">
+            <summary>
+            创建新部门
+            </summary>
+            <param name="dto">部门创建DTO</param>
+            <returns>创建成功的部门信息</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.DepartmentController.Get(System.Int32)">
+            <summary>
+            获取指定ID的部门信息
+            </summary>
+            <param name="id">部门ID</param>
+            <returns>部门详细信息</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.DepartmentController.Update(System.Int32,TrainingManagement.Model.Dtos.DepartmentDto)">
+            <summary>
+            更新部门信息
+            </summary>
+            <param name="id">部门ID</param>
+            <param name="dto">部门更新DTO</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.DepartmentController.Delete(System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <param name="id">部门ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.Create(TrainingManagement.Model.Dtos.QuestionnaireCreateDto)">
+            <summary>
+            创建新的问卷
+            </summary>
+            <param name="questionnaire">问卷信息</param>
+            <returns>创建成功的问卷对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.Get(System.Int32)">
+            <summary>
+            根据ID获取问卷信息
+            </summary>
+            <param name="id">问卷ID</param>
+            <returns>问卷对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.GetAll">
+            <summary>
+            获取所有问卷列表
+            </summary>
+            <returns>问卷列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.GetByDepartment(System.Int32)">
+            <summary>
+            根据部门ID获取问卷列表
+            </summary>
+            <param name="departmentId">部门ID</param>
+            <returns>问卷列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.Update(TrainingManagement.Model.Dtos.QuestionnaireDto)">
+            <summary>
+            更新问卷信息
+            </summary>
+            <param name="id">问卷ID</param>
+            <param name="questionnaire">更新后的问卷信息</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.Publish(System.Int32)">
+            <summary>
+            发布问卷
+            </summary>
+            <param name="id">问卷ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.AddQuestion(System.Int32,System.Int32)">
+            <summary>
+            向问卷中添加题目
+            </summary>
+            <param name="questionnaireId">问卷ID</param>
+            <param name="questionId">题目ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.QuestionnaireController.Delete(System.Int32)">
+            <summary>
+            删除问卷
+            </summary>
+            <param name="id">问卷ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.Create(TrainingManagement.Model.Dtos.TrainingCreateDto)">
+            <summary>
+            创建新的培训
+            </summary>
+            <param name="training">培训信息</param>
+            <returns>创建成功的培训对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.Get(System.Int32)">
+            <summary>
+            根据ID获取培训信息
+            </summary>
+            <param name="id">培训ID</param>
+            <returns>培训对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.GetAll">
+            <summary>
+            获取所有培训列表
+            </summary>
+            <returns>培训列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.GetByDepartment(System.Int32)">
+            <summary>
+            根据部门ID获取培训列表
+            </summary>
+            <param name="departmentId">部门ID</param>
+            <returns>培训列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.Update(TrainingManagement.Model.Dtos.TrainingDto)">
+            <summary>
+            更新培训信息
+            </summary>
+            <param name="id">培训ID</param>
+            <param name="training">更新后的培训信息</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.Publish(System.Int32)">
+            <summary>
+            发布培训
+            </summary>
+            <param name="id">培训ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.TrainingController.Delete(System.Int32)">
+            <summary>
+            删除培训
+            </summary>
+            <param name="id">培训ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.Create(TrainingManagement.Model.User)">
+            <summary>
+            创建新用户
+            </summary>
+            <param name="user">用户信息</param>
+            <returns>创建成功的用户对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            根据ID获取用户信息
+            </summary>
+            <param name="id">用户ID</param>
+            <returns>用户对象</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.GetAll">
+            <summary>
+            获取所有用户列表
+            </summary>
+            <returns>用户列表</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.Update(System.Int32,TrainingManagement.Model.User)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="user">更新后的用户信息</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id">用户ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.ResetPassword(System.Int32,System.String)">
+            <summary>
+            重置用户密码
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="newPassword">新密码</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.AssignDepartment(System.Int32,System.Int32)">
+            <summary>
+            分配用户到部门
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="departmentId">部门ID</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:TrainingManagement.Controllers.UserController.AssignRole(System.Int32,System.Int32)">
+            <summary>
+            为用户分配角色
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="roleId">角色ID</param>
+            <returns>操作结果</returns>
+        </member>
+    </members>
+</doc>
